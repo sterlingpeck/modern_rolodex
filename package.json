@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "node": "^17.7.2",
+    "sequelize": "^6.20.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "modern_rolodex",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sterlingpeck/modern_rolodex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sterlingpeck/modern_rolodex/issues"
+  },
+  "homepage": "https://github.com/sterlingpeck/modern_rolodex#readme"
+}
