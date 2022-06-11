@@ -1,8 +1,10 @@
 const cards = [
   {
-    name: "Tim Sabat",
+    fname: "Tim",
+    lname: "Sabat",
     at: "@tsabat",
-    tag: "Testing",
+    phone: "801-867-5309",
+    adress: "123 Main St",
   },
   {
     name: "Alex Vazquez",
@@ -54,7 +56,7 @@ const icons = [
 // for each card create an article and append it to the deck
 const deck = document.querySelector(".deck");
 
-cards.forEach(({ name, at, tag }, index) => {
+cards.forEach(({ name, at, tag, phone, address }, index) => {
   /* card markup
   
     article.card
