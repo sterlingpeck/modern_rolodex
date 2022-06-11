@@ -12,23 +12,24 @@
 </head>
 
 <body>
-  <!-- container for the cards, added through the script -->
-  <div class="deck"></div>
+  <section class="main-container">
+    <!-- container for the cards, added through the script -->
+    <div class="deck"></div>
+    <div class="new-contact-container">
+      <div class="new-contact-section">
+        <h2>Add a homie</h2>
+        <form>
+          <label for="fname">First name:</label><br />
+          <input type="text" id="contact-fname" name="fname" /><br />
+          <label for="lname">Last name:</label><br />
+          <input type="text" id="contact-lname" name="lname" /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="contact-email" name="email" /><br />
+          <label for="phone">Phone Number:</label><br />
+          <input type="tel" id="contact-phone" name="phone" /><br />
+          <!-- <label for="address" id="contact-address">Address:</label><br /> -->
 
-  <div class="new-contact-section">
-    <h2>Add a homie</h2>
-    <form>
-      <label for="fname">First name:</label><br />
-      <input type="text" id="contact-fname" name="fname" /><br />
-      <label for="lname">Last name:</label><br />
-      <input type="text" id="contact-lname" name="lname" /><br />
-      <label for="email">Email:</label><br />
-      <input type="email" id="contact-email" name="email" /><br />
-      <label for="phone">Phone Number:</label><br />
-      <input type="tel" id="contact-phone" name="phone" /><br />
-      <!-- <label for="address" id="contact-address">Address:</label><br /> -->
-
-      <!-- <div class="form-group">
+          <!-- <div class="form-group">
         <input
           type="street"
           class="form-control"
@@ -71,13 +72,15 @@
           placeholder="Country"
         />
       </div> -->
-      <br />
-    </form>
+          <br />
+        </form>
 
-    <div class="icons">
-      <button type="submit" value="Submit" id="save-contact">Submit</button>
+        <div class="icons">
+          <button type="submit" value="Submit" id="save-contact">Submit</button>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
   <script src="./js/index.js"></script>
   <script src="./js/contactform.js"></script>
 </body>
