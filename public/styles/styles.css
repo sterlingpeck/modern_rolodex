@@ -63,7 +63,7 @@ body {
 
 /* give the deck a fixed width and height */
 .deck {
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 20px 0px;
   width: 750px;
   height: 350px;
   /* position relative for the pseudo element */
