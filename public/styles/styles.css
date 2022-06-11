@@ -19,10 +19,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: 6px 6px 50px white;
+  
 }
 .new-contact-section h2 {
   align-items: center;
+  
 }
+#save-contact {
+  background-color: white;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0px;
+}
+#save-contact:hover {
+  background-color: white;
+  box-shadow: 1px 1px 10px white;
+  border: 0px;
+
+}
+
 /* give the deck a fixed width and height */
 .deck {
   margin: 3rem 0;
@@ -72,6 +91,7 @@ body {
   transform-origin: 50% 100%;
   transform-style: preserve-3d;
   transform: translateY(-4px) rotateX(0deg);
+
 }
 /* absolute position each half of the card to cover the size of the card itself */
 .deck .card .card--front,
