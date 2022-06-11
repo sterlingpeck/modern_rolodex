@@ -16,8 +16,8 @@ body {
 /* give the deck a fixed width and height */
 .deck {
   margin: 3rem 0;
-  width: 350px;
-  height: 250px;
+  width: 750px;
+  height: 350px;
   /* position relative for the pseudo element */
   position: relative;
   /* perspective for the nested cards */
@@ -91,9 +91,6 @@ body {
 /* rotate the back of the card */
 .deck .card .card--back {
   transform: rotateY(180deg);
-  /* include the icon of codepen as a background */
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><g transform="translate(5 5)" fill="none" stroke="%231E1F26" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"><path d="M 45 0 l 45 30 l -45 30 l -45 -30 l 45 -30 v 30 l 45 30 l -45 30 l -45 -30 l 45 -30 m 45 30 v -30 m -45 30 v 30 m -45 -30 v -30"></path></g></svg>'),
-    hsl(0, 0%, 100%);
   background-size: 40%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
