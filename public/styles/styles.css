@@ -10,8 +10,18 @@ body {
   background: #131418;
   /* center the deck horizontally */
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   font-family: "Nunito Sans", sans-serif;
+}
+.new-contact-section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-contact-section h2 {
+  align-items: center;
 }
 /* give the deck a fixed width and height */
 .deck {
