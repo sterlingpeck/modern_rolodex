@@ -5,19 +5,67 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   min-height: 100vh;
   background: #131418;
   /* center the deck horizontally */
-  display: flex;
-  justify-content: center;
+
   font-family: "Nunito Sans", sans-serif;
 }
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.new-contact-container {
+  display: flex;
+  align-items: center;
+}
+
+.new-contact-section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: 6px 6px 50px white;
+
+}
+
+.new-contact-section h2 {
+  align-items: center;
+
+}
+
+#save-contact {
+  background-color: white;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0px;
+}
+
+#save-contact:hover {
+  background-color: white;
+  box-shadow: 1px 1px 10px white;
+  border: 0px;
+
+}
+
 /* give the deck a fixed width and height */
 .deck {
-  margin: 3rem 0;
-  width: 350px;
-  height: 250px;
+  margin: 20px 0px 20px 0px;
+  width: 750px;
+  height: 350px;
   /* position relative for the pseudo element */
   position: relative;
   /* perspective for the nested cards */
@@ -34,22 +82,21 @@ body {
   width: 100%;
   height: 25px;
   transform: translate(0, -50%);
-  clip-path: polygon(
-    35% 0%,
-    40% 0%,
-    40% 100%,
-    35% 100%,
-    35% 0%,
-    60% 0%,
-    65% 0%,
-    65% 100%,
-    60% 100%,
-    60% 0%
-  );
+  clip-path: polygon(35% 0%,
+      40% 0%,
+      40% 100%,
+      35% 100%,
+      35% 0%,
+      60% 0%,
+      65% 0%,
+      65% 100%,
+      60% 100%,
+      60% 0%);
   background: linear-gradient(to bottom, #93a9d2, #fff, #93a9d2);
   /* z index to have the pseudo element _behind_ the cards which follow */
   z-index: -5;
 }
+
 /* absolute position each card to cover the size of the deck */
 .deck .card {
   position: absolute;
@@ -62,7 +109,9 @@ body {
   transform-origin: 50% 100%;
   transform-style: preserve-3d;
   transform: translateY(-4px) rotateX(0deg);
+
 }
+
 /* absolute position each half of the card to cover the size of the card itself */
 .deck .card .card--front,
 .deck .card .card--back {
@@ -73,31 +122,29 @@ body {
   height: 100%;
   background: hsl(0, 0%, 100%);
   backface-visibility: hidden;
-  clip-path: polygon(
-    0% 100%,
-    35% 100%,
-    35% calc(100% - 8.25px),
-    40% calc(100% - 8.25px),
-    40% 100%,
-    60% 100%,
-    60% calc(100% - 8.25px),
-    65% calc(100% - 8.25px),
-    65% 100%,
-    100% 100%,
-    100% 0%,
-    0% 0%
-  ); /* 8.25 = (25/ 2) + 4; considering the height of the hinges and the vertical translation*/
+  clip-path: polygon(0% 100%,
+      35% 100%,
+      35% calc(100% - 8.25px),
+      40% calc(100% - 8.25px),
+      40% 100%,
+      60% 100%,
+      60% calc(100% - 8.25px),
+      65% calc(100% - 8.25px),
+      65% 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%);
+  /* 8.25 = (25/ 2) + 4; considering the height of the hinges and the vertical translation*/
 }
+
 /* rotate the back of the card */
 .deck .card .card--back {
   transform: rotateY(180deg);
-  /* include the icon of codepen as a background */
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><g transform="translate(5 5)" fill="none" stroke="%231E1F26" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"><path d="M 45 0 l 45 30 l -45 30 l -45 -30 l 45 -30 v 30 l 45 30 l -45 30 l -45 -30 l 45 -30 m 45 30 v -30 m -45 30 v 30 m -45 -30 v -30"></path></g></svg>'),
-    hsl(0, 0%, 100%);
   background-size: 40%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
 /* when the card is toggled to .active rotate the container */
 .deck .card.active {
   transform: translateY(4px) rotateX(-180deg);
@@ -116,12 +163,14 @@ body {
   justify-items: center;
   align-items: center;
 }
-.deck .card .card--front > svg {
+
+.deck .card .card--front>svg {
   width: 110px;
   height: auto;
   display: block;
   grid-row: 1/3;
 }
+
 .deck .card .card--front h1 {
   color: #0ebeff;
   text-transform: uppercase;
@@ -129,6 +178,7 @@ body {
   justify-self: start;
   align-self: end;
 }
+
 .deck .card .card--front h2 {
   grid-column: 2/3;
   grid-row: 2/3;
@@ -139,6 +189,7 @@ body {
   justify-self: start;
   align-self: start;
 }
+
 .deck .card .card--front p {
   grid-column: span 2;
   text-align: center;
@@ -159,19 +210,21 @@ body {
   padding: 0.75rem;
   box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.2);
   /* hide the buttons by default */
-  opacity: 0;
 }
+
 .deck .card button svg {
   display: block;
   width: 100%;
   height: 100%;
   background: none;
 }
+
 /* smaller button for the back of the card */
 .deck .card .card--back button {
   width: 38px;
   height: 38px;
 }
+
 /* show the button when hovering the card or focusing on the button */
 .deck .card:hover button,
 .deck .card button:focus {
@@ -187,27 +240,35 @@ svg#rolodex {
   right: 1rem;
   display: block;
 }
+
 /* animate the lines in the #flip group to rotate to 0 */
 svg#rolodex g#flip use {
   animation: rotate 10s infinite ease-out;
 }
+
 /* increase the delay for each subsequent line */
 svg#rolodex g#flip use:nth-of-type(2) {
   animation-delay: 0.2s;
 }
+
 svg#rolodex g#flip use:nth-of-type(3) {
   animation-delay: 0.4s;
 }
+
 svg#rolodex g#flip use:nth-of-type(4) {
   animation-delay: 0.6s;
 }
+
 svg#rolodex g#flip use:nth-of-type(5) {
   animation-delay: 0.8s;
 }
+
 svg#rolodex g#flip use:nth-of-type(6) {
   animation-delay: 1s;
 }
+
 @keyframes rotate {
+
   10%,
   100% {
     transform: rotate(0deg);
