@@ -25,8 +25,8 @@ const handleContactSave = () => {
 // let activeNote = {};
 
 // const getContacts = () =>
-//   fetch("/api/notes", {
-//     method: "GET",
+//   fetch("/api", {
+//     method: "POST",
 //     headers: {
 //       "Content-Type": "application/json",
 //     },
