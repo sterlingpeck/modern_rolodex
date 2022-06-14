@@ -1,7 +1,6 @@
 const cards = [
   {
-    fname: "Tim",
-    lname: "Sabat",
+    name: "Tim Sabat",
     at: "@tsabat",
     phone: "801-867-5309",
     adress: "123 Main St",
@@ -56,7 +55,7 @@ const icons = [
 // for each card create an article and append it to the deck
 const deck = document.querySelector(".deck");
 
-cards.forEach(({ name, at, tag, phone, address }, index) => {
+cards.forEach(({ name, at, tag, phone }, index) => {
   /* card markup
   
     article.card
@@ -132,7 +131,7 @@ cards.forEach(({ name, at, tag, phone, address }, index) => {
   
         <h1>${name}</h1>
         <h2>${at}</h2>
-        <p>${tag}</p>
+        <p>${phone}</p>
         <button>
           <svg viewBox="0 0 100 100" width="35" height="35">
             <path
@@ -175,4 +174,13 @@ cards.forEach(({ name, at, tag, phone, address }, index) => {
     }, 500);
   });
   deck.appendChild(card);
+});
+
+router.get("/", (req, res) => {
+  res.render("homepage", {
+    fname: 1,
+    lname: 2,
+    at: "john.doe@test.com",
+    phone: "801-555-6969",
+  });
 });
