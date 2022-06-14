@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,900|Noto+Serif:700i&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-image: url(../img/pngtree-80s-retro-style-sci-fi-background-image_308368.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Nunito Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    text-align: center;
+    display: inline-block;
+    background: none;
+    width: 400px;
+    height: 300px;
+}
+.login-box {
+    
+    width: 400px;
+}
+.login-box h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 2px white;
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+#username-field {
+    box-shadow: 5px 5px 5px black;
+    margin-bottom: 10px;
+    height: 40px;
+    text-align: center;
+    background-color: transparent;
+}
+#password-field {
+    box-shadow: 5px 5px 5px black;
+    height: 40px;
+    text-align: center;
+    background-color: transparent;
+}
+#login-form-submit {
+    margin: 10px;
+    text-align: center;
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,121,9,1) 35%, rgba(0,212,255,1) 100%);}
