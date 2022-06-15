@@ -1,49 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolodex</title>
-    <script defer src="login.js"></script>
-    <link rel="stylesheet" href="./styles/styles.css" />
-  </head>
 
-  <body>
-    <main id="main-holder">
-      <h4 class="mt-4">
-        Create and maintain all of your personal and professional contacts!
-      </h4>
-      <h1 id="login-header">Login</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rolodex</title>
+  <script defer src="./js/login.js"></script>
+  <link rel="stylesheet" href="./styles/session.css" />
 
-      <div id="login-error-msg-holder">
+</head>
+
+<body>
+  <main class="main-container">
+    <div class="login-box">
+      <h1 id="login-header">Modern Rolodex</h1>
+
+      <!-- <div id="login-error-msg-holder">
         <p id="login-error-msg">
           Invalid username
           <span id="error-msg-second-line">and/or password</span>
         </p>
-      </div>
+      </div> -->
 
       <form id="login-form">
-        <input
-          type="text"
-          name="username"
-          id="username-field"
-          class="login-form-field"
-          placeholder="Username"
-        />
-        <input
-          type="password"
-          name="password"
-          id="password-field"
-          class="login-form-field"
-          placeholder="Password"
-        />
-        <input
-          type="submit"
-          value="Login"
-          id="login-form-submit"
-          href="./rolodex.html"
-        />
+        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username" />
+        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password" />
+        <input type="submit" value="Login" id="login-form-submit" href="./rolodex.html" />
       </form>
-    </main>
-  </body>
+    </div>
+  </main>
+
+</body>
+
 </html>
