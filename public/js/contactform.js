@@ -15,6 +15,19 @@ const handleContactSave = () => {
     // address: contactAddress.value,
   };
   console.log(newContact);
+  fetch("./api/contacts/api/contactpost", {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newContact)
+  }).then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   // saveContact(newContact).then(() => {
   //   getAndRenderContact();
   //   renderActiveContact();
@@ -68,16 +81,16 @@ const handleContactSave = () => {
 saveContactBtn.addEventListener("click", handleContactSave);
 
 
-router.get('/', (req, res) => {
-  res.render('homepage', {
-    id: 1,
-    post_url: 'https://handlebarsjs.com/guide/',
-    title: 'Handlebars Docs',
-    created_at: new Date(),
-    vote_count: 10,
-    comments: [{}, {}],
-    user: {
-      username: 'test_user'
-    }
-  });
-});
+// router.get('/', (req, res) => {
+//   res.render('homepage', {
+//     id: 1,
+//     post_url: 'https://handlebarsjs.com/guide/',
+//     title: 'Handlebars Docs',
+//     created_at: new Date(),
+//     vote_count: 10,
+//     comments: [{}, {}],
+//     user: {
+//       username: 'test_user'
+//     }
+//   });
+// });

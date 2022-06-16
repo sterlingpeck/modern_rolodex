@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/rolodex", (req, res) => {
-  res.issueFile(path.join(__dirname, "../../public/rolodex.html"));
+  res.sendFile(path.join(__dirname, "../../public/rolodex.html"));
 });
 
 module.exports = router;

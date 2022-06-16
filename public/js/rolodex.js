@@ -1,6 +1,6 @@
 const cards = [
   {
-    name: "Tim Sabat",
+    name: "Jenny!",
     at: "@tsabat",
     phone: "801-867-5309",
     adress: "123 Main St",

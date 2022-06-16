@@ -7,10 +7,6 @@ CREATE TABLE contact_card (
   last_name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   phone_number VARCHAR(255) NOT NULL,
-  -- address VARCHAR(255) NOT NULL,
-  -- city VARCHAR(255) NOT NULL,
-  -- state VARCHAR(255) NOT NULL,
-  -- zip VARCHAR(255) NOT NULL,
   created_at DATETIME NOT NULL,
   updated_at DATETIME NOT NULL
 --   CONSTRAINT fk_dep FOREIGN KEY (dep_id) REFERENCES departments(id) ON DELETE SET NULL

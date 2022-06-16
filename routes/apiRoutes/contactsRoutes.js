@@ -1,16 +1,17 @@
 const express = require("express");
 const router = express.Router();
+const db = require("../../config/connection");
 
 // Create a contact
 router.post("/api/contactpost", ({ body }, res) => {
-  const sql = `INSERT INTO contactdatabase (first_name, last_name, email, phone_number) VALUES (?,?,?,?)`;
+  const sql = `INSERT INTO contact_card (first_name, last_name, email, phone_number) VALUES (?,?,?,?)`;
+  console.log(body);
   const params = [
-    body.first_name,
-    body.last_name,
+    body.firstname,
+    body.lastname,
     body.email,
-    body.phone_number,
+    body.phone,
   ];
-
   db.query(sql, params, (err, result) => {
     if (err) {
       res.status(400).json({ error: err.message });
