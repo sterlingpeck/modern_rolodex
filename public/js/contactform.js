@@ -3,7 +3,6 @@ let contactLastName = document.querySelector("#contact-lname");
 let contactEmail = document.querySelector("#contact-email");
 let contactPhone = document.querySelector("#contact-phone");
 let contactAddress = document.querySelector("#contact-adress");
-
 let saveContactBtn = document.querySelector("#save-contact");
 
 const handleContactSave = () => {
@@ -18,15 +17,16 @@ const handleContactSave = () => {
   fetch("./api/contacts/api/contactpost", {
     method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(newContact)
-  }).then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
+    body: JSON.stringify(newContact),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
     })
     .catch((error) => {
-      console.error('Error:', error);
+      console.error("Error:", error);
     });
   // saveContact(newContact).then(() => {
   //   getAndRenderContact();
@@ -79,7 +79,6 @@ const handleContactSave = () => {
 // };
 
 saveContactBtn.addEventListener("click", handleContactSave);
-
 
 // router.get('/', (req, res) => {
 //   res.render('homepage', {

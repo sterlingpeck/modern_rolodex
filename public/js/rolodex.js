@@ -176,11 +176,11 @@ cards.forEach(({ name, at, tag, phone }, index) => {
   deck.appendChild(card);
 });
 
-router.get("/", (req, res) => {
-  res.render("homepage", {
-    fname: 1,
-    lname: 2,
-    at: "john.doe@test.com",
-    phone: "801-555-6969",
-  });
-});
+// router.get("/", (req, res) => {
+//   res.render("homepage", {
+//     fname: 1,
+//     lname: 2,
+//     at: "john.doe@test.com",
+//     phone: "801-555-6969",
+//   });
+// });
