@@ -3,7 +3,9 @@ const apiRoutes = require("./routes/apiRoutes");
 const htmlRoutes = require("./routes/htmlRoutes");
 const sequelize = require("./config/connection");
 const exphbs = require("express-handlebars");
-const hbs = exphbs.create({});
+
+
+const hbs = exphbs.create({ helpers });
 
 const app = express();
 const PORT = process.env.PORT || 3001;

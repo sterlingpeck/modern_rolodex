@@ -1,3 +1,5 @@
+const { post } = require("../../routes/apiRoutes");
+
 let contactFirstName = document.querySelector("#contact-fname");
 let contactLastName = document.querySelector("#contact-lname");
 let contactEmail = document.querySelector("#contact-email");
@@ -15,6 +17,17 @@ const handleContactSave = () => {
     // address: contactAddress.value,
   };
   console.log(newContact);
+
+  fetch("/api/api", {
+    method: "POST",
+    body: JSON.strinify(newContact)
+ }).then(response => response.json())
+ .then(data => {
+  console.log('Success:', data);
+ })
+ .catch((error) => {
+  console.error('Error:', error);
+});
   // saveContact(newContact).then(() => {
   //   getAndRenderContact();
   //   renderActiveContact();
