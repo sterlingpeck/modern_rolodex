@@ -21,6 +21,7 @@ router.post("/api/contactpost", ({ body }, res) => {
 });
 
 router.get("/api/contactget", (req, res) => {
+  console.log("get contacts", req);
   const sql = `SELECT * FROM contact_card
                   AS contacts 
                   FROM contact_card`;

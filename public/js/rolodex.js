@@ -1,46 +1,61 @@
-const cards = [
-  {
-    name: "Jenny!",
-    at: "@tsabat",
-    phone: "801-867-5309",
-    adress: "123 Main St",
-  },
-  {
-    name: "Alex Vazquez",
-    at: "@quezo",
-    tag: "Front End Engineer",
-  },
-  {
-    name: "Chris Coyier",
-    at: "@chriscoyier",
-    tag: "I'm kinda into this whole Code thing.",
-  },
-  {
-    name: "Marie Mosley",
-    at: "@mariemosley",
-    tag: "Look out honey 'cause I'm using technology.",
-  },
-  {
-    name: "Rachel Smith",
-    at: "@rachsmith",
-    tag: "pixel pusher and JavaScript wrangler at Code.",
-  },
-  {
-    name: "Cassidy Williams",
-    at: "@cassidoo",
-    tag: "I code things.",
-  },
-  {
-    name: "Klare Frank",
-    at: "@klare",
-    tag: "Leading design at Code.",
-  },
-  {
-    name: "Stephen Shaw",
-    at: "@shshaw",
-    tag: "A rockstar.",
-  },
-];
+// const cards = [
+//   {
+//     name: "Jenny!",
+//     at: "@tsabat",
+//     phone: "801-867-5309",
+//     adress: "123 Main St",
+//   },
+//   {
+//     name: "Alex Vazquez",
+//     at: "@quezo",
+//     tag: "Front End Engineer",
+//   },
+//   {
+//     name: "Chris Coyier",
+//     at: "@chriscoyier",
+//     tag: "I'm kinda into this whole Code thing.",
+//   },
+//   {
+//     name: "Marie Mosley",
+//     at: "@mariemosley",
+//     tag: "Look out honey 'cause I'm using technology.",
+//   },
+//   {
+//     name: "Rachel Smith",
+//     at: "@rachsmith",
+//     tag: "pixel pusher and JavaScript wrangler at Code.",
+//   },
+//   {
+//     name: "Cassidy Williams",
+//     at: "@cassidoo",
+//     tag: "I code things.",
+//   },
+//   {
+//     name: "Klare Frank",
+//     at: "@klare",
+//     tag: "Leading design at Code.",
+//   },
+//   {
+//     name: "Stephen Shaw",
+//     at: "@shshaw",
+//     tag: "A rockstar.",
+//   },
+// ];
+
+async function getContacts() {
+  const response = await fetch("/api/contactget", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json(); // Extracting data as a JSON Object from the response
+  console.log(data, "balls");
+  return data;
+}
+
+const cards = getContacts().then((response) => console.log(response.json()));
+console.log(cards, "cards");
 
 // array describing the d attributes for the icon included in the avatar
 // the idea is to pick at random from the array

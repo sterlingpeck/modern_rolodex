@@ -14,7 +14,7 @@ const handleContactSave = () => {
     // address: contactAddress.value,
   };
   console.log(newContact);
-  fetch("./api/contacts/api/contactpost", {
+  fetch("/api/contactpost", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -28,17 +28,10 @@ const handleContactSave = () => {
     .catch((error) => {
       console.error("Error:", error);
     });
-  // saveContact(newContact).then(() => {
-  //   getAndRenderContact();
-  //   renderActiveContact();
-  // });
 };
 
-// activeNote is used to keep track of the note in the textarea
-// let activeNote = {};
-
 // const getContacts = () =>
-//   fetch("/api", {
+//   fetch("/api/contactget", {
 //     method: "POST",
 //     headers: {
 //       "Content-Type": "application/json",
